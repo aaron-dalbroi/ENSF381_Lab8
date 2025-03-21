@@ -39,6 +39,7 @@ try:
             links += 1
         elif(tag.name == 'p'):
             paragraphs += 1
+
     print("Question 3: Data Analysis")
     print(20 * '-')
     print(f"Number of h1 tags: {h1}")
@@ -54,16 +55,18 @@ try:
     print("Question 4: Keywords Analysis")
     print(20 * '-')
     user_input = input("Enter a keyword to search for: ").lower()
+    
+    # Get the individual words on the page.
     webpage_text = soup.get_text().lower()
-    keyword_count = webpage_text.count(user_input)
+    individual_words = webpage_text.split()
+
+    # See how many times that word appears in the page content.
+    keyword_count = individual_words.count(user_input)
     print(f"'{user_input}' appears {keyword_count} times in the page content\n")
 
-    # 5. Links Analysis
+    # 5. Word Frequency Analysis
     print("Question 5: Links Analysis")
     print(20 * '-')
-    
-    # Get the individual words
-    individual_words = webpage_text.split()
     
     # Create a frequency table for the words
     frequency_table = {}
@@ -101,6 +104,6 @@ try:
     plt.title('Group 15 Web Analyzer Results for UofC Wikipedia Page')
     plt.ylabel('Count')
     plt.show()
-    
+
 except Exception as e:
     print(f"Error fetching content: {e}")
