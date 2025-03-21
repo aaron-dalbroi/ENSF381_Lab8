@@ -65,7 +65,7 @@ try:
     print(f"'{user_input}' appears {keyword_count} times in the page content\n")
 
     # 5. Word Frequency Analysis
-    print("Question 5: Links Analysis")
+    print("Question 5: Frequency Analysis")
     print(20 * '-')
 
     # Create a frequency table for the words
