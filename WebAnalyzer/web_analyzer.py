@@ -67,7 +67,7 @@ try:
     # 5. Word Frequency Analysis
     print("Question 5: Links Analysis")
     print(20 * '-')
-    
+
     # Create a frequency table for the words
     frequency_table = {}
 
@@ -90,7 +90,9 @@ try:
     print(20 * '-')
 
     all_paragraphs = soup.find_all('p')
-    longest_paragraph = max(all_paragraphs, key=len)
+    
+    longest_paragraph = max(all_paragraphs, key=lambda x: len(x.text))
+    
     print(f"Longest paragraph:\n {longest_paragraph.text}\n")
     print(f"Word Count: {len(longest_paragraph.text.split())}")
 
