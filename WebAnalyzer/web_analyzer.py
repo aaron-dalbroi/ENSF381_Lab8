@@ -89,8 +89,10 @@ try:
     print("\nQuestion 6: Finding the Longest Paragraph")
     print(20 * '-')
 
+    # Get all paragraphs (tag <p>)
     all_paragraphs = soup.find_all('p')
     
+    # Get the longest paragraph
     longest_paragraph = max(all_paragraphs, key=lambda x: len(x.text))
     
     print(f"Longest paragraph:\n {longest_paragraph.text}\n")
