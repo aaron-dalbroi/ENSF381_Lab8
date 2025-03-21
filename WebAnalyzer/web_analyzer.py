@@ -12,6 +12,8 @@ try:
     print(f"Successfully fetched content from {url}\n")
 
     # 3. Data Analysis
+    print("Question 3: Data Analysis")
+    print(20 * '-')
     h1 = 0
     h2 = 0
     h3 = 0
@@ -40,8 +42,6 @@ try:
         elif(tag.name == 'p'):
             paragraphs += 1
 
-    print("Question 3: Data Analysis")
-    print(20 * '-')
     print(f"Number of h1 tags: {h1}")
     print(f"Number of h2 tags: {h2}")
     print(f"Number of h3 tags: {h3}")
